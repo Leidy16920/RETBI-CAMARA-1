@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETBI CAMARA | Proyecto Botánico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #e2e8f0; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass { 
+            background: rgba(0, 0, 0, 0.8); 
+            backdrop-filter: blur(15px); 
+            border: 1px solid rgba(16, 185, 129, 0.2); 
+        }
+        .text-neon { 
+            color: #10b981;
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.6); 
+        }
+        .bg-neon-gradient {
+            background: linear-gradient(135deg, #064e3b 0%, #000000 100%);
+        }
+        .video-box { 
+            background: #050505; 
+            border: 1px solid #10b981; 
+            box-shadow: inset 0 0 15px rgba(16, 185, 129, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-box::before {
+            content: "RETBI_SYSTEM_LINK: WAITING...";
+            font-family: monospace;
+            font-size: 10px;
+            color: #10b981;
+            opacity: 0.5;
+            letter-spacing: 3px;
+        }
+        .img-frame {
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            transition: all 0.5s ease;
+            overflow: hidden;
+            border-radius: 2rem;
+        }
+        .img-frame:hover {
+            border-color: #10b981;
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+            transform: scale(1.02);
+        }
+        img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.2); }
+        
+        /* Barra de scroll personalizada */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 10px; }
+    </style>
+</head>
+<body class="selection:bg-emerald-500/40">
+
+    <nav class="fixed top-0 w-full z-50 glass border-b border-emerald-900/50 py-5 px-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-black tracking-tighter text-neon italic">RETBI <span class="text-white not-italic">CAMARA</span></h1>
+            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.4em] font-bold">
+                <a href="#inicio" class="hover:text-emerald-400 transition">Inicio</a>
+                <a href="#anomalias" class="hover:text-emerald-400 transition">Anomalías</a>
+                <a href="#proyecto" class="hover:text-emerald-400 transition">Proyecto</a>
+                <a href="#impacto" class="hover:text-emerald-400 transition">Impacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="pt-48 pb-20 px-6 container mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold tracking-widest uppercase">
+                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span> Sistema Activo
+            </div>
+            <h2 class="text-6xl md:text-8xl font-black leading-[0.9] text-white">Tecnología <br><span class="text-neon">Sostenible.</span></h2>
+            <p class="text-slate-400 text-xl leading-relaxed max-w-lg">
+                Fusión de robótica avanzada y naturaleza para la protección de ecosistemas vivos en el Jardín Botánico.
+            </p>
+        </div>
+        <div class="img-frame h-[500px] shadow-2xl shadow-emerald-900/20">
+            <img src="image_5b5c7f.png" onerror="this.src='https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1000'" alt="Vista">
+        </div>
+    </header>
+
+    <section class="py-24 bg-zinc-950/50 border-y border-emerald-900/30">
+        <div class="container mx-auto px-6">
+            <h3 class="text-sm font-bold text-emerald-500 mb-10 tracking-[0.5em] uppercase">Monitorización_Video</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="aspect-video video-box rounded-3xl"></div>
+                <div class="aspect-video video-box rounded-3xl"></div>
+                <div class="aspect-video video-box rounded-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="anomalias" class="py-24 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div class="space-y-8">
+                <h3 class="text-4xl font-extrabold text-white italic">🌳 Anomalías en los árboles del jardín botánico</h3>
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    En los jardines botánicos, los árboles pueden presentar rayones, daños o anomalías por diferentes factores. Entre los más comunes se encuentran el contacto humano (personas que tocan, rayan o dañan la corteza), el desgaste natural causado por el clima (viento, lluvia, cambios de temperatura), la presencia de plagas o enfermedades, y también el crecimiento irregular de la propia planta.
+                </p>
+                <div class="bg-emerald-950/30 border border-emerald-500/20 p-8 rounded-[2rem]">
+                    <p class="text-slate-300 italic">
+                        Estos rayones o daños en la corteza pueden afectar la salud del árbol, ya que debilitan su protección natural y facilitan la entrada de bacterias, hongos o insectos. Si no se detectan a tiempo, estos problemas pueden empeorar y afectar el ecosistema del jardín.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="img-frame h-64">
+                    <img src="image_5b5cb9.png" onerror="this.src='https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&q=80&w=600'">
+                </div>
+                <div class="img-frame h-64 translate-y-12">
+                    <img src="image_5b5cdc.png" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=600'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyecto" class="py-24 bg-neon-gradient">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
+            <div class="md:w-1/2 order-2 md:order-1">
+                <div class="img-frame h-[450px]">
+                    <img src="image_5b5c9c.png" onerror="this.src='https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800'">
+                </div>
+            </div>
+            <div class="md:w-1/2 space-y-8 order-1 md:order-2">
+                <h3 class="text-4xl font-extrabold text-white">🤖 ¿Para qué sirve nuestro proyecto?</h3>
+                <p class="text-slate-300 text-lg">
+                    Nuestro proyecto consiste en un RETBI explorador equipado con una Raspberry Pi y una cámara, que permite recorrer el jardín botánico y observar el estado de los árboles sin intervenir directamente en el entorno.
+                </p>
+                <p class="text-slate-400">
+                    Este sistema captura imágenes en tiempo real y las analiza mediante herramientas como OpenCV, permitiendo identificar posibles anomalías como daños en la corteza, comportamientos extraños o cambios en el entorno.
+                </p>
+                <div class="bg-black/40 p-6 rounded-2xl border border-emerald-500/20 text-sm text-slate-400 font-mono">
+                    > Almacenamiento en Jardín Botánico Digital activado...
+                    <br>> Consultas y análisis posteriores disponibles.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 container mx-auto px-6">
+        <h3 class="text-3xl font-extrabold text-white mb-12 text-center italic">🌱 Importancia en la actualidad</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="glass p-10 rounded-[2.5rem] hover:border-emerald-500 transition duration-500">
+                <div class="text-emerald-500 text-2xl font-black mb-4">01.</div>
+                <p class="text-sm font-bold text-white mb-2 uppercase">Ecosistema</p>
+                <p class="text-xs text-slate-500">Monitorear árboles sin afectar el entorno vivo.</p>
+            </div>
+            <div class="glass p-10 rounded-[2.5rem] hover:border-emerald-500 transition duration-500">
+                <div class="text-emerald-500 text-2xl font-black mb-4">02.</div>
+                <p class="text-sm font-bold text-white mb-2 uppercase">Prevención</p>
+                <p class="text-xs text-slate-500">Detectar daños de forma temprana y efectiva.</p>
+            </div>
+            <div class="glass p-10 rounded-[2.5rem] hover:border-emerald-500 transition duration-500">
+                <div class="text-emerald-500 text-2xl font-black mb-4">03.</div>
+                <p class="text-sm font-bold text-white mb-2 uppercase">Optimización</p>
+                <p class="text-xs text-slate-500">Reducir el trabajo manual de inspección física.</p>
+            </div>
+            <div class="glass p-10 rounded-[2.5rem] hover:border-emerald-500 transition duration-500">
+                <div class="text-emerald-500 text-2xl font-black mb-4">04.</div>
+                <p class="text-sm font-bold text-white mb-2 uppercase">Tecnología</p>
+                <p class="text-xs text-slate-500">Apoyar el cuidado ambiental con herramientas digitales.</p>
+            </div>
+        </div>
+        <p class="text-center mt-16 text-emerald-400 font-medium">Esto facilita que los encargados del jardín puedan tomar decisiones más rápidas y efectivas para la conservación de las plantas.</p>
+    </section>
+
+    <section id="impacto" class="py-24 bg-zinc-950 border-t border-emerald-900/30">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-extrabold text-white mb-16">🚀 Impacto a futuro</h3>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 text-left">
+                <div class="space-y-6">
+                    <p class="flex items-center gap-4 text-slate-300"><span class="w-2 h-2 bg-emerald-500 rounded-full"></span> Implementar IA para detección automática.</p>
+                    <p class="flex items-center gap-4 text-slate-300"><span class="w-2 h-2 bg-emerald-500 rounded-full"></span> Monitoreo en tiempo real global.</p>
+                </div>
+                <div class="space-y-6">
+                    <p class="flex items-center gap-4 text-slate-300"><span class="w-2 h-2 bg-emerald-500 rounded-full"></span> Uso en parques y zonas forestales.</p>
+                    <p class="flex items-center gap-4 text-slate-300"><span class="w-2 h-2 bg-emerald-500 rounded-full"></span> Mejora de conservación a gran escala.</p>
+                </div>
+            </div>
+            <p class="mt-20 text-slate-400 max-w-2xl mx-auto italic">De esta manera, la tecnología se convierte en una herramienta clave para proteger la biodiversidad y promover el cuidado de los ecosistemas.</p>
+        </div>
+    </section>
+
+    <footer class="py-32 container mx-auto px-6 text-center">
+        <h3 class="text-5xl font-black text-neon mb-10 italic">🧠 Conclusión</h3>
+        <p class="max-w-3xl mx-auto text-slate-300 text-2xl leading-relaxed font-light">
+            Nuestro proyecto demuestra cómo la robótica y la programación pueden integrarse para resolver problemas reales en el cuidado del medio ambiente, ofreciendo una solución innovadora, eficiente y sostenible.
+        </p>
+        <div class="mt-32 pt-10 border-t border-emerald-900/50">
+            <p class="text-[9px] text-zinc-700 font-mono tracking-[1em] uppercase">RETBI CAMARA • 2026 • BOGOTÁ</p>
+        </div>
+    </footer>
+
+</body>
+</html>
